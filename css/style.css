@@ -45,30 +45,6 @@ html {
     color: hsl(234, 12%, 34%);
 }
 
-hr {
-    border: none;
-    height: 5px;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
-    margin: 0px;
-}
-
-#left {
-    background-color: hsl(180, 62%, 55%);
-}
-
-#top {
-    background-color: hsl(0, 78%, 62%);
-}
-
-#bottom {
-    background-color: hsl(34, 97%, 64%);
-}
-
-#right {
-    background-color: hsl(212, 86%, 64%);
-}
-
 .left,
 .top,
 .bottom,
@@ -80,12 +56,14 @@ hr {
     height: 30%;
     width: 18%;
     padding: 0 10px 0 30px;
+    border-top: 5px solid;
 }
 
 .left {
     margin-inline-start: 16rem;
     margin-block-start: 10rem;
     float: left;
+    border-color: hsl(180, 62%, 55%);
 }
 
 .top {
@@ -93,6 +71,7 @@ hr {
     left: 50%;
     top: 47%;
     transform: translate(-50%, -50%);
+    border-color: hsl(0, 78%, 62%);
 }
 
 .bottom {
@@ -101,12 +80,14 @@ hr {
     top: 70%;
     transform: translate(-50%, -50%);
     margin-block-start: 5rem;
+    border-color: hsl(34, 97%, 64%);
 }
 
 .right {
     margin-inline-end: 16rem;
     margin-block-start: 10rem;
     float: right;
+    border-color: hsl(212, 86%, 64%);
 }
 
 img {
@@ -122,4 +103,40 @@ img {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+@media only screen and (max-width: 600px) {
+    .info {
+        font-size: 12px;
+        margin-inline-start: 50px;
+    }
+    #text {
+        width: 100%;
+        margin-inline-start: 0px;
+        font-size: 15px;
+    }
+    .left,
+    .top,
+    .bottom,
+    .right {
+        width: 50%;
+    }
+    .left {
+        position: absolute;
+        bottom: 40%;
+        right: 19%;
+    }
+    .top {
+        top: 80%;
+        left: 52%;
+    }
+    .bottom {
+        top: 104%;
+        left: 52%;
+    }
+    .right {
+        position: absolute;
+        bottom: -65%;
+        left: 24%;
+    }
 }
